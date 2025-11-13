@@ -1,20 +1,3 @@
-"""Locust load test for the File Storage API.
-
-This scenario exercises multiple endpoints:
-  - GET / (root)
-  - GET /files (list files)
-  - POST /files (file upload) -- performed in on_start so downloads succeed
-  - GET /files/{filename} (download)
-  - GET /health and GET /metrics
-
-Usage (local):
-  pip install locust
-  locust -f locustfile.py --host http://localhost:8000
-
-Headless example:
-  locust -f locustfile.py --headless -u 50 -r 5 --run-time 1m --host http://localhost:8000
-"""
-
 from uuid import uuid4
 import io
 import random
