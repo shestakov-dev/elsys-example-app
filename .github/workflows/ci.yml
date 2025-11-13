@@ -8,7 +8,7 @@ on:
 
 jobs:
     test:
-        name: Run unit tests and short Locust
+        name: Run unit and load tests (CI)
         runs-on: ubuntu-latest
 
         steps:
@@ -60,7 +60,7 @@ jobs:
                   fi
 
     build_and_publish:
-        name: Build and push Docker image (GHCR)
+        name: Build and push Docker image to GHCR (CD)
         runs-on: ubuntu-latest
         needs: test
         # only run this job for direct pushes to main (not for PRs)
